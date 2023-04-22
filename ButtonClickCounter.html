@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ButtonClickCount</title>
+    <style>
+        .container {
+            border: 5px solid black;
+            border-radius: 8px;
+            width: 200px;
+            height: 120px;
+            padding: 20px 70px;
+            background-color: antiquewhite;
+        }
+
+        #click-btn {
+            cursor: pointer;
+            background-color: goldenrod;
+            border-radius: 5px;
+            width: 120px;
+            height: 40px;
+            font-size: x-large;
+            margin-left: 30px;
+            
+
+        }
+
+        #clickcount {
+            padding-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="click-btn">Click Me</button>
+        <h4 id="clickcount"></h4>
+    </div>
+    <script>
+        var count = 0;
+        var btn = document.getElementById("click-btn");
+        btn.addEventListener("click", function () {
+            count++;
+            document.getElementById("clickcount").innerHTML = "Click [" + count + "] time";
+        });
+    </script>
+</body>
+
+</html>
